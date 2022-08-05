@@ -10,10 +10,7 @@ This MNIST code is taken from the official [PyTorch examples](https://github.com
 
 ```bash
 $ brew install unweave/unweave/unweave
-==> Downloading https://github.com/unweave/cli/releases/download/v0.0.19/unweave_0.0.19_darwin_arm64.tar.gz
-Already downloaded: /Users/markwinter/Library/Caches/Homebrew/downloads/fb4b2b676e3b8680405f5094e438827fead5210146df54cc96aad0ea026ae1e3--unweave_0.0.19_darwin_arm64.tar.gz
-==> Installing unweave from unweave/unweave
-🍺  /opt/homebrew/Cellar/unweave/0.0.19: 5 files, 7.4MB, built in 1 second
+==> Downloading ...
 ````
 
 2. Use the Unweave CLI to login, following the login flow in your browser.
@@ -40,44 +37,38 @@ Path:    	/Users/markwinter/Code/starters/mnist
 Project: 	mnist-starter
 ```
 
-5. Run the training script with the Unweave CLI. This will create a zepl with your data and run it on our infrastructure.
+5. Run the training script with the Unweave CLI. This will create a serverless compute node (`zepl`) with your data and run it.
 
 ```bash
 $ unweave python main.py
 Executing command 'python main.py' in serverless zepl. Press Ctrl+C to cancel
 Executing...
 
-Created zepl "secret-got-rubbed-clock" with ID "a1bee62f-b4c9-44ac-a880-ec04d178b015"
+Created zepl "donkey-lie-poet-other" with ID "a5825ccc-9c83-4bb8-84a0-f16801ffaba1"
 
 Starting zepl. Press Ctrl+C while it is running to cancel the run
 
 🔄 Initializing serverless compute node
-
 ✅ Compute node assigned to zepl
-
 🔄 Syncing Unweave Store
-
 🔄 Building environment
-
 🚀 Zepl running. Fetching logs ...
-
 Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
-Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ../data/MNIST/raw/train-images-idx3-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to ./uwstore/data/MNIST/raw/train-images-idx3-ubyte.gz
 100.0%
-Extracting ../data/MNIST/raw/train-images-idx3-ubyte.gz to ../data/MNIST/raw
+Extracting ./uwstore/data/MNIST/raw/train-images-idx3-ubyte.gz to ./uwstore/data/MNIST/raw
+
 ...
 
-Train Epoch: 1 [0/60000 (0%)]	Loss: 2.329474
-Train Epoch: 1 [640/60000 (1%)]	Loss: 1.425063
-Train Epoch: 1 [1280/60000 (2%)]	Loss: 0.815459
-Train Epoch: 1 [1920/60000 (3%)]	Loss: 0.535510
-Train Epoch: 1 [2560/60000 (4%)]	Loss: 0.425536
-Train Epoch: 1 [3200/60000 (5%)]	Loss: 0.253121
-Train Epoch: 1 [3840/60000 (6%)]	Loss: 0.353541
+Train Epoch: 1 [0/60000 (0%)]	Loss: 2.305400
+Train Epoch: 1 [640/60000 (1%)]	Loss: 1.359780
+Train Epoch: 1 [1280/60000 (2%)]	Loss: 0.830670
+Train Epoch: 1 [1920/60000 (3%)]	Loss: 0.605963
 ...
-
+Train Epoch: 1 [58240/60000 (97%)]	Loss: 0.020182
+Train Epoch: 1 [58880/60000 (98%)]	Loss: 0.017681
+Train Epoch: 1 [59520/60000 (99%)]	Loss: 0.002070
 🧹 Cleaning up
-
 ✅ Zepl complete
 ```
 
