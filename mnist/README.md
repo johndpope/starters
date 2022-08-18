@@ -46,7 +46,9 @@ Executing...
 
 Created zepl "donkey-lie-poet-other" with ID "a5825ccc-9c83-4bb8-84a0-f16801ffaba1"
 
-Starting zepl. Press Ctrl+C while it is running to cancel the run
+Starting zepl
+Press Ctrl+C to cancel the zepl
+Press Ctrl+D to detach
 
 🔄 Initializing serverless compute node
 ✅ Compute node assigned to zepl
@@ -72,7 +74,21 @@ Train Epoch: 1 [59520/60000 (99%)]	Loss: 0.002070
 ✅ Zepl complete
 ```
 
-6. Your MNIST training is complete! You can explore more helpful CLI commands
+6. Your MNIST training is complete! You can now fetch the model that was saved in remote storage. In the future you'll be able to use the output of one zepl in another zepl.
+
+```bash
+$ unweave ls <zepl-id>
+Listing output for zepl "<zepl-id>"
+You can download a file using "unweave download <zepl-id> <file-path>"
+
+mnist_cnn.pt
+
+$ unweave download <zepl-id> mnist_cnn.pt
+Downloading object "mnist_cnn.pt" from zepl "<zepl-id>"
+Saved to local file "./mnist_cnn.pt"
+```
+
+7. Explore other unweave cli commands
 
 ```bash
 # Open the Unweave dashboard in your browser
