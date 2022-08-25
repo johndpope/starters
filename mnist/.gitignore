@@ -1,2 +1,2 @@
 # Ignore the uwstore so it isn't included in zepl context
-uwstore
+uwstore/
