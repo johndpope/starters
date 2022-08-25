@@ -37,7 +37,28 @@ Path:    	/Users/markwinter/Code/starters/mnist
 Project: 	mnist-starter
 ```
 
-5. Run the training script with the Unweave CLI. This will create a serverless compute node (`zepl`) with your data and run it.
+5. Downloda the MNIST training data set using the provided script. This will download to the `./uwstore/data/MNIST` directory.
+
+```bash
+$ python download.py
+```
+
+6. Upload the MNIST data to the uwstore. This data will now always be available for each of your training scripts at the path `./uwstore/data`. If you inspect
+the `main.py` script you will see that we load the MNIST dataset from that local path without downloading the data again.
+
+```bash
+$ unweave store upload uwstore/data/MNIST
+Uploading file MNIST/raw/t10k-images-idx3-ubyte Uploaded!
+Uploading file MNIST/raw/t10k-images-idx3-ubyte.gz Uploaded!
+Uploading file MNIST/raw/t10k-labels-idx1-ubyte Uploaded!
+Uploading file MNIST/raw/t10k-labels-idx1-ubyte.gz Uploaded!
+Uploading file MNIST/raw/train-images-idx3-ubyte Uploaded!
+Uploading file MNIST/raw/train-images-idx3-ubyte.gz Uploaded!
+Uploading file MNIST/raw/train-labels-idx1-ubyte Uploaded!
+Uploading file MNIST/raw/train-labels-idx1-ubyte.gz Uploaded!
+```
+
+7. Run the training script with the Unweave CLI. This will create a serverless compute node (`zepl`) with your data and run it.
 
 ```bash
 $ unweave python main.py
@@ -74,21 +95,26 @@ Train Epoch: 1 [59520/60000 (99%)]	Loss: 0.002070
 ✅ Zepl complete
 ```
 
-6. Your MNIST training is complete! You can now fetch the model that was saved in remote storage. In the future you'll be able to use the output of one zepl in another zepl.
+8. Your MNIST training is complete! You can now fetch the model that was saved in remote storage. In the future you'll be able to use the output of one zepl in another zepl.
 
 ```bash
-$ unweave ls <zepl-id>
-Listing output for zepl "<zepl-id>"
-You can download a file using "unweave download <zepl-id> <file-path>"
+$ unweave store list 
+2022-08-25 10:34:46 +0900 KST	7.8 MB	data/MNIST/raw/t10k-images-idx3-ubyte
+2022-08-25 10:34:47 +0900 KST	1.6 MB	data/MNIST/raw/t10k-images-idx3-ubyte.gz
+2022-08-25 10:34:48 +0900 KST	10 kB	data/MNIST/raw/t10k-labels-idx1-ubyte
+2022-08-25 10:34:48 +0900 KST	4.5 kB	data/MNIST/raw/t10k-labels-idx1-ubyte.gz
+2022-08-25 10:34:50 +0900 KST	47 MB	data/MNIST/raw/train-images-idx3-ubyte
+2022-08-25 10:35:09 +0900 KST	9.9 MB	data/MNIST/raw/train-images-idx3-ubyte.gz
+2022-08-25 10:35:10 +0900 KST	60 kB	data/MNIST/raw/train-labels-idx1-ubyte
+2022-08-25 10:35:10 +0900 KST	29 kB	data/MNIST/raw/train-labels-idx1-ubyte.gz
+...
+2022-08-16 09:49:54 +0900 KST	4.8 MB	output/000f422b-a293-4f9f-be22-ce1f66d00533/mnist_cnn.pt
 
-mnist_cnn.pt
-
-$ unweave download <zepl-id> mnist_cnn.pt
-Downloading object "mnist_cnn.pt" from zepl "<zepl-id>"
-Saved to local file "./mnist_cnn.pt"
+$ unweave store download output/000f422b-a293-4f9f-be22-ce1f66d00533/mnist_cnn.pt 
+Saved to local file "./uwstore/output/000f422b-a293-4f9f-be22-ce1f66d00533/mnist_cnn.pt"
 ```
 
-7. Explore other unweave cli commands
+10. Explore other unweave cli commands
 
 ```bash
 # Open the Unweave dashboard in your browser
