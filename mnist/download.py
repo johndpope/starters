@@ -1,7 +1,6 @@
 import os
 import gzip
 import shutil
-from turtle import down
 import urllib.request
 
 base = "http://yann.lecun.com/exdb/mnist/"
