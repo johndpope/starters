@@ -40,6 +40,7 @@ Project: 	time_sequence_prediction
 5. Run the training script with the Unweave CLI. This will create a serverless compute node (`zepl`) with your data and run it.
 
 ```bash
+$ unweave python train.py
 Created zepl "wooden-dish-most-sea" with ID "52bf79f0-643d-4d6c-b4e6-6ecbef3c9315"
 
 Starting zepl
