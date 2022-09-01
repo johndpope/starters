@@ -6,31 +6,30 @@ This Time Sequence Prediction code is taken from the official [PyTorch examples]
 
 ## Run the starter on Unweave
 
-1. If you don't have Unweave CLI installed, you can get it from homebrew
+1. If you don't have the Unweave CLI installed, you can get it from homebrew:
 
 ```bash
-$ brew install unweave/unweave/unweave
-==> Downloading ...
+brew install unweave/unweave/unweave
 ````
 
-2. Use the Unweave CLI to login, following the login flow in your browser.
+2. Use the CLI to login, following the login flow in your browser.
 
 ```bash
-$ unweave login
+❯ unweave login
 ? Do you want to open the browser to login? (Y/n)
 ```
 
 3. Clone this repository and cd into this Time Sequence Prediction starter directory
 
 ```bash
-$ git clone https://github.com/unweave/starters.git
-$ cd time_sequence_prediction 
+git clone https://github.com/unweave/starters.git
+cd time_sequence_prediction 
 ```
 
-4. Initialise the directory with unweave and hit enter to name the project after the current directory name
+4. Initialise the directory with unweave and hit enter to name the project after the current directory name.
 
 ```bash
-$ unweave init
+❯ unweave init
 ? Enter project name [time_sequence_prediction]:
 Created project time_sequence_prediction
 Path:    	/Users/markwinter/Code/starters/time_sequence_prediction
@@ -67,7 +66,7 @@ loss: 0.20507018018165285
 8. Your Time Sequence Prediction training is complete! You can now view and download all the PDFs that were generated with the prediction plots.
 
 ```bash
-$ unweave store list 
+❯ unweave store list 
 2022-09-01 20:06:03 +0900 KST	25 kB	output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict0.pdf
 2022-09-01 20:06:03 +0900 KST	40 kB	output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict1.pdf
 2022-09-01 20:06:03 +0900 KST	28 kB	output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict2.pdf
@@ -81,27 +80,27 @@ predict2.pdf saved to ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/pred
 predict3.pdf saved to ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict3.pdf
 predict4.pdf saved to ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict4.pdf
 
-$ open ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict0.pdf
+❯ open ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict0.pdf
 ```
 
 10. Explore other unweave cli commands
 
 ```bash
 # Open the Unweave dashboard in your browser
-$ unweave open
+❯ unweave open
 ```
 
 ```bash
 # Check the logs of a zepl
-$ unweave logs <zepl-id>
+❯ unweave logs <zepl-id>
 ```
 
 ```bash
 # Check all your zepls
-$ unweave zepls
+❯ unweave zepls
 ```
 
 ```bash
 # Run a zepl but immediately detach once it has successfully launched
-$ unweave -d python train.py
+❯ unweave -d python train.py
 ```
