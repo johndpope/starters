@@ -63,7 +63,7 @@ loss: 0.20507018018165285
 ✅ Zepl complete
 ```
 
-8. Your Time Sequence Prediction training is complete! You can now view and download all the PDFs that were generated with the prediction plots.
+6. Your Time Sequence Prediction training is complete! You can now view and download all the PDFs that were generated with the prediction plots.
 
 ```bash
 ❯ unweave store list 
@@ -83,7 +83,7 @@ predict4.pdf saved to ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/pred
 ❯ open ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict0.pdf
 ```
 
-9. Explore other unweave cli commands
+7. Explore other unweave cli commands
 
 ```bash
 # Open the Unweave dashboard in your browser
