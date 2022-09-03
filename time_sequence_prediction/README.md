@@ -83,7 +83,7 @@ predict4.pdf saved to ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/pred
 ❯ open ./uwstore/output/52bf79f0-643d-4d6c-b4e6-6ecbef3c9315/predict0.pdf
 ```
 
-10. Explore other unweave cli commands
+9. Explore other unweave cli commands
 
 ```bash
 # Open the Unweave dashboard in your browser
