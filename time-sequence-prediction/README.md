@@ -23,17 +23,17 @@ brew install unweave/unweave/unweave
 
 ```bash
 git clone https://github.com/unweave/starters.git
-cd time_sequence_prediction 
+cd time-sequence-prediction 
 ```
 
 4. Initialise the directory with unweave and hit enter to name the project after the current directory name.
 
 ```bash
 ❯ unweave init
-? Enter project name [time_sequence_prediction]:
-Created project time_sequence_prediction
-Path:    	/Users/markwinter/Code/starters/time_sequence_prediction
-Project: 	time_sequence_prediction
+? Enter project name [time-sequence-prediction]:
+Created project time-sequence-prediction
+Path:    	/Users/markwinter/Code/starters/time-sequence-prediction
+Project: 	time-sequence-prediction
 ```
 
 5. Run the training script with the Unweave CLI. This will create a serverless compute node (`zepl`) with your data and run it.

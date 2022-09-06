@@ -1,4 +1,4 @@
-# Original Source: https://github.com/pytorch/examples/tree/main/time_sequence_prediction
+# Original Source: https://github.com/pytorch/examples/tree/main/time-sequence-prediction
 from __future__ import print_function
 import argparse
 import torch
