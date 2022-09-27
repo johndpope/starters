@@ -88,6 +88,8 @@ Epoch 81:  34%|███▍      | 26/76 [00:08<00:16,  3.05it/s, loss=0.17, v_n
 Uploading file embeddings_gs-6099.pt Uploaded!
 ```
 
+**In the future, steps 7 and 8 won't be necessary. You'll be able to access output data from previous zepls seamlessly but this is still in development :)**
+
 9. The second step is to generate new images. We will run the txt2img python script using the unweave CLI with the following arguments.
 
 ```bash
