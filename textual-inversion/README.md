@@ -41,7 +41,7 @@ Project: 	textual-inversion
 ❯ rm -rf img
 ```
 
-6. Run the main python script with the Unweave CLI. This will create a serverless compute node (`zepl`) with your data and run it. **This requires access to GPUs. If you need access please contact us.**
+6. Run the main python script with the Unweave CLI. This will create a serverless compute node (`zepl`) with your data and run it. **This requires access to GPU zepls. If you need access please contact us.**
 
 ```bash
 ❯ unweave --gpu python main.py -- --base configs/latent-diffusion/txt2img-1p4B-finetune.yaml -t --actual_resume ./uwstore/data/model.ckpt -n test --gpus 0, --data_root ./uwstore/data/img --init_word sculpture --no-test --logdir ./uwstore/output
