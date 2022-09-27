@@ -75,3 +75,8 @@ Epoch 81:  34%|███▍      | 26/76 [00:08<00:16,  3.05it/s, loss=0.17, v_n
 ✅ Zepl complete
 ```
 
+7. You can now download the images or checkpoints from your uwstore
+
+```bash
+❯ unweave store download output/<zepl-id>/textual2022-09-27T03-24-39_test/images/train/
+```
