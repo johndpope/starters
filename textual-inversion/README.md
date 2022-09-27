@@ -34,17 +34,18 @@ Path:    	/Users/markwinter/Code/starters/textual-inversion
 Project: 	textual-inversion
 ```
 
-5. Upload the sample images to the uwstore so they're available to your zepls without uploading them every time you start a zepl. We can then delete the images after they're in the uwstore
+5. Download an image set from the authors found [here](https://drive.google.com/drive/folders/1d2UXkX0GWM-4qUwThjNhFIPP7S6WUbQJ). You should then upload the images to your uwstore so they are available to your zepls without uploading them every time you start a zepl.
 
 ```bash
-❯ unweave store upload img
-❯ rm -rf img
+# Download an image set from the google drive link and unzip it to a directory.
+# If you used the thin_bird dataset and unzipped it, you woud upload it like below
+❯ unweave store upload ~/Downloads/thin_bird
 ```
 
 6. Run the main python script with the Unweave CLI. This will create a serverless compute node (`zepl`) with your data and run it. **This requires access to GPU zepls. If you need access please contact us.**
 
 ```bash
-❯ unweave --gpu python main.py -- --base configs/latent-diffusion/txt2img-1p4B-finetune.yaml -t --actual_resume ./uwstore/data/model.ckpt -n test --gpus 0, --data_root ./uwstore/data/img --init_word sculpture --no-test --logdir ./uwstore/output
+❯ unweave --gpu python main.py -- --base configs/latent-diffusion/txt2img-1p4B-finetune.yaml -t --actual_resume ./uwstore/data/model.ckpt -n test --gpus 0, --data_root ./uwstore/data/thin_bird --init_word sculpture --no-test --logdir ./uwstore/output
 Created zepl "wooden-dish-most-sea" with ID "52bf79f0-643d-4d6c-b4e6-6ecbef3c9315"
 
 Starting zepl
