@@ -91,5 +91,5 @@ Uploading file embeddings_gs-6099.pt Uploaded!
 8. The second step is to generate new images. We will run the main python script again using the unweave CLI with the following arguments.
 
 ```bash
-❯ unweave python scripts/txt2img.py -- --ddim_eta 0.0 --n_samples 8 --n_iter 2 --scale 10.0 --ddim_steps 50 --embedding_path ./uwstore/data/embeddings_gs-6099.pt --ckpt_path ./uwstore/data/model.ckpt --prompt "a photo of sculpture" --outdir ./uwstore/output
+❯ unweave --gpu python scripts/txt2img.py -- --ddim_eta 0.0 --n_samples 8 --n_iter 2 --scale 10.0 --ddim_steps 50 --embedding_path ./uwstore/data/embeddings_gs-6099.pt --ckpt_path ./uwstore/data/model.ckpt --prompt "a photo of sculpture" --outdir ./uwstore/output
 ```
